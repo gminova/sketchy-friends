@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
 import DrawingBoard from "./drawingBoard/index";
+import InputForm from "./inputForm/index";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       <DrawingBoard />
-        <p>Hello from Gigi & Vivi!</p>
+      <InputForm />
       </header>
     </div>
   );

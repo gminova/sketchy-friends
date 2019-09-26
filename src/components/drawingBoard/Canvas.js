@@ -74,10 +74,15 @@ const Canvas = () => {
 
   return (
     <div>
+      <canvas
+        className="drawing-board__canvas"
+        width={640}
+        height={400}
+      ></canvas>
       <pre>
         {mouseX}:{mouseY}
       </pre>
-      <input
+      <br/><input
         type="color"
         className="drawing-board__color-picker"
         value={color}
@@ -85,13 +90,8 @@ const Canvas = () => {
       ></input>
       <p>Your color is:</p>
       <p style={{ color: color }}>{color}</p>
-      <button className="drawing-board__button--clear">Clear</button>
-      <canvas
-        className="drawing-board__canvas"
-        width={640}
-        height={400}
-      ></canvas>
-      <button className="drawing-board__button--undo">Undo</button>
+      <button className="drawing-board__button--clear" style={{ display: "none" }}>Clear</button>
+      <button className="drawing-board__button--undo" style={{ display: "none" }}>Undo</button>
     </div>
   );
 };

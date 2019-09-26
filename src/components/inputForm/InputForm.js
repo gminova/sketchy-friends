@@ -1,5 +1,4 @@
 import React from "react";
-// import {setProfile} from "./display";
 
 const InputForm = props => {
   return (

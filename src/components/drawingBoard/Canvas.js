@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 
 const Canvas = () => {
+  // handle color pick
+  const [color, setColor] = React.useState("");
+  const onColorChange = event => setColor(event.target.value);
   // set default state for mouse coordinates
   const [mouseX, setX] = useState(0);
   const [mouseY, setY] = useState(0);
@@ -58,9 +61,9 @@ const Canvas = () => {
 
     // core drawing function - takes the mouse coordinates and the context
     // and draws from one coordinate point [x,y] to another [x,y]
-    const drawLine = (context, x1, y1, x2, y2) => {
+    const drawLine = (context, x1, y1, x2, y2, color) => {
       context.beginPath();
-      context.strokeStyle = "black";
+      context.strokeStyle = "#fa0808";
       context.lineWidth = 1;
       context.moveTo(x1, y1);
       context.lineTo(x2, y2);
@@ -74,7 +77,13 @@ const Canvas = () => {
       <pre>
         {mouseX}:{mouseY}
       </pre>
-      <input type="color" className="drawing-board__color-picker"></input>
+      <input
+        type="color"
+        className="drawing-board__color-picker"
+        value={color}
+        onChange={onColorChange}
+      ></input>
+      <p style={{ color: color }}>Your color is: {color}</p>
       <button className="drawing-board__button--clear">Clear</button>
       <canvas
         className="drawing-board__canvas"

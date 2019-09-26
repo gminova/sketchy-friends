@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <DrawingBoard />
-      <Display profile={profile} />
       <InputForm profile={profile} setProfile={setProfile} />
+      <Display profile={profile} />
+      <DrawingBoard />
       </header>
     </div>
   );

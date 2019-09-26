@@ -7,7 +7,6 @@ import DrawingBoard from "./index";
 
 test("Canvas component renders", () => {
   const { getByText } = render(<Canvas />);
-  debug();
   getByText("Your color is:");
 });
 

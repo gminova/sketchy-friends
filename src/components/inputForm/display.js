@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css"
 import getProfile from "../../utils/getProfile.js"
-let username = 'gminova';
+let username = 'reubengt';
 
 const Display = props => {
   const [picture, setPicture] = useState('https://s23527.pcdn.co/wp-content/uploads/2019/02/moon-1-768x533.jpg.optimal.jpg')

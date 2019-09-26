@@ -80,8 +80,8 @@ const Canvas = () => {
     <div>
       <canvas
         className="drawing-board__canvas"
-        width={640}
-        height={400}
+        width={500}
+        height={500}
       ></canvas>
       <pre>
         {mouseX}:{mouseY}

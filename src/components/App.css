@@ -1,22 +1,49 @@
-.App {
+.app {
+  width: 100vw;
+  height: 100vh;
+  margin: none;
+}
+
+
+.app--input-form {
+  /* width: 100vw;
+  height: 10vw; */
+  text-align: center;
+
+  color: red;
+  background-color: red;
+}
+
+.app--drawing-section {
+  /* width: 100vw;
+  height: 90vw; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  background-color: green;
+}
+
+.input-form__image {
+  margin: auto;
+  height: 500px;
+  width: 500px;
+}
+
+
+.input-form {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+
+.input-form__label {
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+.input-form__input {
+  margin: auto;
+  display: block;
+  width: 150px;
+  height: 30px;
+  font-size: 1em;
 }

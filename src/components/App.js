@@ -9,12 +9,12 @@ function App() {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
-      <InputForm profile={profile} setProfile={setProfile} />
-      <Display profile={profile} />
-      <DrawingBoard />
-      </header>
+    <div className="app">
+      <InputForm className="app--input-form" profile={profile} setProfile={setProfile} />
+      <section className="app--drawing-section">
+        <Display className="app--display" profile={profile} />
+        <DrawingBoard className="app--drawing-board" />
+      </section>
     </div>
   );
 }

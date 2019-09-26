@@ -15,7 +15,6 @@ const Canvas = () => {
     // Get the canvas context - we will draw on this and call functions to draw on the context
     const context = myPics.getContext("2d");
 
-
     // The x and y offset of the canvas from the edge of the page
     const rect = myPics.getBoundingClientRect();
 
@@ -46,7 +45,7 @@ const Canvas = () => {
 
     // core drawing function - takes the mouse coordinates and the context
     // and draws from one coordinate point [x,y] to another [x,y]
-    function drawLine(context, x1, y1, x2, y2) {
+    const drawLine = (context, x1, y1, x2, y2) => {
       context.beginPath();
       context.strokeStyle = "black";
       context.lineWidth = 1;
@@ -54,10 +53,9 @@ const Canvas = () => {
       context.lineTo(x2, y2);
       context.stroke();
       context.closePath();
-    }
+    };
   }, []);
 
-  
   return (
     <div>
       <canvas

@@ -77,7 +77,7 @@ const Canvas = () => {
   }, [color]);
 
   return (
-    <div>
+    <div className="drawing-board__container">
       <canvas
         className="drawing-board__canvas"
         width={500}
@@ -86,7 +86,9 @@ const Canvas = () => {
       <pre>
         {mouseX}:{mouseY}
       </pre>
-      <br/><input
+      <br/>
+      <p>Select a colour:</p>
+      <input
         type="color"
         className="drawing-board__color-picker"
         value={color}

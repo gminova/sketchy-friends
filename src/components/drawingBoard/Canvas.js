@@ -58,11 +58,17 @@ const Canvas = () => {
 
   return (
     <div>
+      <input
+        type="color"
+        className="drawing-color-picker"
+      ></input>
+      <button>Clear</button>
       <canvas
         className="drawing-board__canvas"
         width={650}
         height={400}
       ></canvas>
+      <button>Undo</button>
     </div>
   );
 };

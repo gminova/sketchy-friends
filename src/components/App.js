@@ -5,7 +5,7 @@ import InputForm from "./inputForm/InputForm";
 import Display from "./inputForm/Display";
 
 function App() {
-  const [profile, setProfile] = useState('gminova')
+  const [profile, setProfile] = useState('fac-17')
 
 
   return (

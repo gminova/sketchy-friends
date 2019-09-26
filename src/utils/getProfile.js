@@ -1,5 +1,4 @@
 // import { token } from "../../token";
-const token = '38fe6214dd60b5402b4642787523c2154506007c'
 
 const checkResponse = response => {
   if (response.status !== 200) {
@@ -10,8 +9,8 @@ const checkResponse = response => {
 };
 
 const getProfile = async username => {
-  // const url = `https://api.github.com/users/${username}`;
-  const url = `https://api.github.com/users/${username}?access_token=${token}`;
+  const url = `https://api.github.com/users/${username}`;
+  // const url = `https://api.github.com/users/${username}?access_token=${token}`;
     try {
       let response = await fetch(url);
       let json = await response.json();

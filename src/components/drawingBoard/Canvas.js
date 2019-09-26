@@ -60,15 +60,16 @@ const Canvas = () => {
     <div>
       <input
         type="color"
-        className="drawing-color-picker"
+        className="drawing-board__color-picker"
       ></input>
-      <button>Clear</button>
+      <button 
+        className="drawing-board__button--clear">Clear</button>
       <canvas
         className="drawing-board__canvas"
         width={650}
         height={400}
       ></canvas>
-      <button>Undo</button>
+      <button className="drawing-board__button--undo">Undo</button>
     </div>
   );
 };

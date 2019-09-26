@@ -3,7 +3,7 @@ import "./style.css";
 
 const Canvas = () => {
   // handle color pick
-  const [color, setColor] = React.useState("");
+  const [color, setColor] = React.useState("#000000");
   const onColorChange = event => setColor(event.target.value);
   // set default state for mouse coordinates
   const [mouseX, setX] = useState(0);
@@ -61,9 +61,9 @@ const Canvas = () => {
 
     // core drawing function - takes the mouse coordinates and the context
     // and draws from one coordinate point [x,y] to another [x,y]
-    const drawLine = (context, x1, y1, x2, y2, color) => {
+    const drawLine = (context, x1, y1, x2, y2) => {
       context.beginPath();
-      context.strokeStyle = "#fa0808";
+      context.strokeStyle = '#000000';
       context.lineWidth = 1;
       context.moveTo(x1, y1);
       context.lineTo(x2, y2);
@@ -83,7 +83,8 @@ const Canvas = () => {
         value={color}
         onChange={onColorChange}
       ></input>
-      <p style={{ color: color }}>Your color is: {color}</p>
+      <p>Your color is:</p>
+      <p style={{ color: color }}>{color}</p>
       <button className="drawing-board__button--clear">Clear</button>
       <canvas
         className="drawing-board__canvas"

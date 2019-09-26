@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import DrawingBoard from "./drawingBoard/index";
-import InputForm from "./inputForm/input";
-import Display from "./inputForm/display";
+import InputForm from "./inputForm/InputForm";
+import Display from "./inputForm/Display";
 
 function App() {
   const [profile, setProfile] = useState('gminova')

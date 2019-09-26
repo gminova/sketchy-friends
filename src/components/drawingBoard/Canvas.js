@@ -25,9 +25,6 @@ const Canvas = () => {
   const [clientY, setClientY] = useState(0);
 
   useEffect(() => {
-    //starting mouse coordinates
-    let x = 0;
-    let y = 0;
     // in order to select the HTML DOM element we need
     // to have at least performed the first render on the DOM.
     // The myPics will be null if the first render has not taken place
@@ -48,7 +45,13 @@ const Canvas = () => {
 
     const handleStroke = event => {
       if (isDrawing === true) {
-        drawLine(context, x, y, event.clientX - rect.left, event.clientY - rect.top);
+        drawLine(
+          context,
+          clientX,
+          clientY,
+          event.clientX - rect.left,
+          event.clientY - rect.top
+        );
         setClientX(event.clientX - rect.left);
         setClientY(event.clientY - rect.top);
       }
@@ -58,7 +61,13 @@ const Canvas = () => {
 
     const handleIsNotDrawing = e => {
       if (isDrawing === true) {
-        drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
+        drawLine(
+          context,
+          clientX,
+          clientY,
+          e.clientX - rect.left,
+          e.clientY - rect.top
+        );
         setClientX(0);
         setClientY(0);
         setIsDrawing(false);
@@ -84,6 +93,9 @@ const Canvas = () => {
     <div>
       <pre>
         {mouseX}:{mouseY}
+      </pre>
+      <pre>
+        {clientX}:{clientY}
       </pre>
       <input type="color" className="drawing-board__color-picker"></input>
       <button className="drawing-board__button--clear">Clear</button>

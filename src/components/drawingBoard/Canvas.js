@@ -1,7 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 
 const Canvas = () => {
+  const [mouseX, setX] = useState(0);
+  const [mouseY, setY] = useState(0);
+  React.useEffect(() => {
+    const handleMouseMove = event => {
+      setX(event.x);
+      setY(event.y);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   useEffect(() => {
     // if user is drawing)mousedown) this will be set to true, else false (mouseup)
     let isDrawing = false;
@@ -58,12 +69,11 @@ const Canvas = () => {
 
   return (
     <div>
-      <input
-        type="color"
-        className="drawing-board__color-picker"
-      ></input>
-      <button 
-        className="drawing-board__button--clear">Clear</button>
+      <pre>
+        {mouseX}:{mouseY}
+      </pre>
+      <input type="color" className="drawing-board__color-picker"></input>
+      <button className="drawing-board__button--clear">Clear</button>
       <canvas
         className="drawing-board__canvas"
         width={650}

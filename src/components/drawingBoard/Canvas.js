@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 
 const Canvas = () => {
+  // set default state for mouse coordinates
   const [mouseX, setX] = useState(0);
   const [mouseY, setY] = useState(0);
-  React.useEffect(() => {
+  useEffect(() => {
+    // if user uses mouse, update coordinates
     const handleMouseMove = event => {
       setX(event.x);
       setY(event.y);

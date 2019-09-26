@@ -18,16 +18,12 @@ const Canvas = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  //
-  // Handle drawing
-  //
-
-  // if user is drawing)mousedown) this will be set to true, else false (mouseup)
-  const [isDrawing, setIsDrawing] = useState(false);
-  const [clientX, setClientX] = useState(0);
-  const [clientY, setClientY] = useState(0);
-
   useEffect(() => {
+    // if user is drawing)mousedown) this will be set to true, else false (mouseup)
+    let isDrawing = false;
+    //starting mouse coordinates
+    let x = 0;
+    let y = 0;
     // in order to select the HTML DOM element we need
     // to have at least performed the first render on the DOM.
     // The myPics will be null if the first render has not taken place
@@ -38,67 +34,48 @@ const Canvas = () => {
     // The x and y offset of the canvas from the edge of the page
     const rect = myPics.getBoundingClientRect();
 
-    const handleIsDrawing = event => {
-      setClientX(event.clientX - rect.left);
-      setClientY(event.clientY - rect.top);
-      setIsDrawing(true);
-    };
+    // Add the event listeners for mousedown, mousemove, and mouseup
+    myPics.addEventListener("mousedown", e => {
+      x = e.clientX - rect.left;
+      y = e.clientY - rect.top;
+      isDrawing = true;
+    });
 
-    myPics.addEventListener("mousedown", handleIsDrawing);
-
-    const handleStroke = event => {
+    // Add an event listener when the mouse if moved
+    myPics.addEventListener("mousemove", e => {
       if (isDrawing === true) {
-        drawLine(
-          context,
-          clientX,
-          clientY,
-          event.clientX - rect.left,
-          event.clientY - rect.top
-        );
-        setClientX(event.clientX - rect.left);
-        setClientY(event.clientY - rect.top);
+        drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
+        x = e.clientX - rect.left;
+        y = e.clientY - rect.top;
       }
-    };
-    // Add an event listener when the mouse is moved
-    myPics.addEventListener("mousemove", handleStroke);
-
-    const handleIsNotDrawing = e => {
-      if (isDrawing === true) {
-        drawLine(
-          context,
-          clientX,
-          clientY,
-          e.clientX - rect.left,
-          e.clientY - rect.top
-        );
-        setClientX(0);
-        setClientY(0);
-        setIsDrawing(false);
-      }
-    };
+    });
     // When the mouse up takes place we need to stop drawing
-    window.addEventListener("mouseup", handleIsNotDrawing);
+    window.addEventListener("mouseup", e => {
+      if (isDrawing === true) {
+        drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
+        x = 0;
+        y = 0;
+        isDrawing = false;
+      }
+    });
 
     // core drawing function - takes the mouse coordinates and the context
     // and draws from one coordinate point [x,y] to another [x,y]
     const drawLine = (context, x1, y1, x2, y2) => {
       context.beginPath();
-      context.strokeStyle = "#000000";
+      context.strokeStyle = '#000000';
       context.lineWidth = 1;
       context.moveTo(x1, y1);
       context.lineTo(x2, y2);
       context.stroke();
       context.closePath();
     };
-  }, [isDrawing]);
+  }, []);
 
   return (
     <div>
       <pre>
         {mouseX}:{mouseY}
-      </pre>
-      <pre>
-        {clientX}:{clientY}
       </pre>
       <input
         type="color"

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
+
 
 const Canvas = () => {
   // handle color pick
@@ -77,25 +77,23 @@ const Canvas = () => {
   }, [color]);
 
   return (
-    <div>
+    <div className="drawing-board__container">
       <canvas
         className="drawing-board__canvas"
-        width={640}
-        height={400}
+        width={500}
+        height={500}
       ></canvas>
       <pre>
         {mouseX}:{mouseY}
       </pre>
-      <br/><input
+      <br/>
+      <p>Select a colour:</p>
+      <input
         type="color"
         className="drawing-board__color-picker"
         value={color}
         onChange={onColorChange}
       ></input>
-      <p>Your color is:</p>
-      <p style={{ color: color }}>{color}</p>
-      <button className="drawing-board__button--clear" style={{ display: "none" }}>Clear</button>
-      <button className="drawing-board__button--undo" style={{ display: "none" }}>Undo</button>
     </div>
   );
 };

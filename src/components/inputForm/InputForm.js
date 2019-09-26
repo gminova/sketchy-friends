@@ -4,9 +4,9 @@ const InputForm = props => {
   return (
     <div>
       <form className="input-form">
-        <h1 display="none">Input form</h1>
+        <h1 display="none">Sketchy Friends</h1>
         <label className="input-form__label" htmlFor="input-form__input">
-          Enter any Github handle:
+          Enter any Github handle & try to draw your friends:
           <input
             type="text"
             name="input-form__input"

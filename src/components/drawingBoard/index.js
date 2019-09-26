@@ -3,10 +3,7 @@ import Canvas from "./Canvas";
 
 const DrawingBoard = () => {
   return (
-    <div className="drawing-board__container">
-      <p>DRAWING BOARD!</p>
-      <Canvas />
-    </div>
+      <Canvas className="drawing-board__container" />
   );
 };
 

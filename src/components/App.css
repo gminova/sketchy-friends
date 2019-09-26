@@ -4,40 +4,12 @@
   margin: none;
 }
 
-
 .app--input-form {
-  /* width: 100vw;
-  height: 10vw; */
   text-align: center;
-
-  color: red;
-  background-color: red;
 }
-
-.app--drawing-section {
-  /* width: 100vw;
-  height: 90vw; */
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  background-color: green;
-}
-
-.input-form__image {
-  margin: auto;
-  height: 500px;
-  width: 500px;
-}
-
 
 .input-form {
   text-align: center;
-}
-
-
-.input-form__label {
-
 }
 
 .input-form__input {
@@ -46,4 +18,29 @@
   width: 150px;
   height: 30px;
   font-size: 1em;
+}
+
+
+
+.input-form__image, .drawing-board__canvas {
+  border: 2px solid black;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+}
+
+
+.drawing-board__canvas {
+  margin-top: 30px;
+  border: 2px solid black;
+  width: 500px;
+  height: 500px;
+  background-color: whitesmoke;
+}
+
+.app--drawing-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+
 }

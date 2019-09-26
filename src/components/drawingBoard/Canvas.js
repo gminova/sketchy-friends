@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
+
 
 const Canvas = () => {
   // handle color pick
@@ -92,10 +92,6 @@ const Canvas = () => {
         value={color}
         onChange={onColorChange}
       ></input>
-      <p>Your color is:</p>
-      <p style={{ color: color }}>{color}</p>
-      <button className="drawing-board__button--clear" style={{ display: "none" }}>Clear</button>
-      <button className="drawing-board__button--undo" style={{ display: "none" }}>Undo</button>
     </div>
   );
 };

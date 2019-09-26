@@ -88,6 +88,8 @@ const Canvas = () => {
       <button className="drawing-board__button--clear">Clear</button>
       <canvas
         className="drawing-board__canvas"
+        width={640}
+        height={400}
       ></canvas>
       <button className="drawing-board__button--undo">Undo</button>
     </div>

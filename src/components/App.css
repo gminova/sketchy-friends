@@ -1,9 +1,9 @@
 html {
-  background: linear-gradient(to top, /* Colour theme: allows text fading into top nav */
-      rgba(224, 224, 25, 0.7),
-      rgba(3, 181, 252, 0.7) 100%);
-
-
+  background: linear-gradient(
+    to top,
+    /* Colour theme: allows text fading into top nav */ rgba(224, 224, 25, 0.7),
+    rgba(3, 181, 252, 0.7) 100%
+  );
 }
 
 .app {
@@ -17,10 +17,9 @@ html {
 
 h1 {
   margin: auto;
-  margin-top: 10px;
   font-size: 3em;
   color: #eb2380;
-  font-family: 'Knewave', cursive;
+  font-family: "Knewave", cursive;
 }
 
 .app--input-form {
@@ -40,7 +39,7 @@ h1 {
   background: none;
   border-radius: 10px;
   border: 2px #eb2380 solid;
-  font-family: 'Knewave', cursive;
+  font-family: "Knewave", cursive;
   color: #eb2380;
   text-align: center;
 }
@@ -51,15 +50,13 @@ h1 {
   height: 30px;
   border-radius: 10px;
   border: 2px #eb2380 solid;
-  font-family: 'Knewave', cursive;
+  font-family: "Knewave", cursive;
   color: #eb2380;
 }
-
 
 .display--image-container {
   margin: 0px auto;
   width: 500px;
-
 }
 
 .display--p {
@@ -100,9 +97,21 @@ h1 {
   display: inline;
 }
 
-
 .app--drawing-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .app--drawing-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .drawing-board__canvas,
+  .display--image-container,
+  .display--image {
+    width: 300px;
+    height: 300px
+  }
 }

@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const InputForm = props => {
+  const [userInput, setUserInput] = useState('');
+
+  const handleSubmit = event => {
+    console.log(userInput);
+    event.preventDefault();
+    props.setProfile(userInput);
+  }
+
   return (
     <div>
       <form className="input-form">
@@ -12,10 +20,15 @@ const InputForm = props => {
             name="input-form__input"
             id="input-form__input"
             className="input-form__input"
-            value={props.profile}
-            onChange={event => props.setProfile(event.target.value)}
+            value={userInput}
+            onChange={event => setUserInput(event.target.value)}
           />
         </label>
+        <input
+          type="submit"
+          value="Find"
+          onClick={handleSubmit}
+        />
       </form>
     </div>
   );

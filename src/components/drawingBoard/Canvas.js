@@ -1,20 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const Canvas = () => {
-
-  // 
+  //
   // COLOR PICK ---------------------------------------
   //
-  // 
+  //
   const [color, setColor] = React.useState("#000000");
   const onColorChange = event => {
     setColor(event.target.value);
   };
 
-  // 
+  //
   // GLOBAL MOUSE COORDINATES ---------------------------------------
   //
-  // 
+  //
   const [mouseX, setX] = useState(0);
   const [mouseY, setY] = useState(0);
 
@@ -28,26 +27,23 @@ const Canvas = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // 
+  //
   // CANVAS ---------------------------------------
   //
   let ref = useRef();
 
   useEffect(() => {
-
     let myCanvas = ref.current;
     // Get the canvas context - we will draw on this and call functions to draw on the context
     const context = myCanvas.getContext("2d");
     const rect = myCanvas.getBoundingClientRect();
     // if user is drawing)mousedown) this will be set to true, else false (mouseup)
     let isDrawing = false;
-    // The x and y offset of the canvas from the edge of the page
+    //
+    // DRAWING MOUSE COORDINATES---------------------------------------
+    //
     let x = 0;
     let y = 0;
-
-    
-
-    
 
     // Add the event listeners for mousedown, mousemove, and mouseup
     myCanvas.addEventListener("mousedown", e => {

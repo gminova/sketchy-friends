@@ -8,6 +8,6 @@ import Display from "./Display";
 afterEach(cleanup);
 
 test("Display component renders", () => {
-  const { getByAltText } = render(<Display />);
-  getByAltText("some image");
+  const { getByText } = render(<Display />);
+  getByText("Loading...");
 });

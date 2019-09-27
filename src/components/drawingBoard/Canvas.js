@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
 
 const Canvas = () => {
-  // handle color pick
+  //
+  // COLOR PICK ---------------------------------------
+  //
+  //
   const [color, setColor] = React.useState("#000000");
   const onColorChange = event => {
     setColor(event.target.value);
-  }
-  // set default state for mouse coordinates
+  };
+
+  //
+  // GLOBAL MOUSE COORDINATES ---------------------------------------
+  //
+  //
   const [mouseX, setX] = useState(0);
   const [mouseY, setY] = useState(0);
-
 
   useEffect(() => {
     // if user uses mouse, update coordinates
@@ -22,21 +27,23 @@ const Canvas = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  //
+  // CANVAS ---------------------------------------
+  //
+  let ref = useRef();
+
   useEffect(() => {
-    // if user is drawing)mousedown) this will be set to true, else false (mouseup)
-    let isDrawing = false;
-    //starting mouse coordinates
-    let x = 0;
-    let y = 0;
-    // in order to select the HTML DOM element we need
-    // to have at least performed the first render on the DOM.
-    // The myCanvas will be null if the first render has not taken place
-    const myCanvas = document.querySelector(".drawing-board__canvas");
+    let myCanvas = ref.current;
     // Get the canvas context - we will draw on this and call functions to draw on the context
     const context = myCanvas.getContext("2d");
-
-    // The x and y offset of the canvas from the edge of the page
     const rect = myCanvas.getBoundingClientRect();
+    // if user is drawing)mousedown) this will be set to true, else false (mouseup)
+    let isDrawing = false;
+    //
+    // DRAWING MOUSE COORDINATES---------------------------------------
+    //
+    let x = 0;
+    let y = 0;
 
     // Add the event listeners for mousedown, mousemove, and mouseup
     myCanvas.addEventListener("mousedown", e => {
@@ -84,8 +91,10 @@ const Canvas = () => {
       className="drawing-board__color-picker"
       value={color}
       onChange={onColorChange}
-    ></input><br/>
+    ></input>
+    <br/>
       <canvas
+        ref={ref}
         className="drawing-board__canvas"
         width={500}
         height={500}

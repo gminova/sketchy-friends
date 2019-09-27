@@ -15,10 +15,11 @@ const Display = props => {
   }
 
   return (
+
     <div className="display--image-container">
       <p className="display--p">You are drawing:  </p>
       <h3 className="display--h3">{username}</h3>
-      <img src={picture.avatar_url} className="display--image" alt="some image" />
+      <img src={picture.avatar_url} className="display--image" alt="avatar" />
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import DrawingBoard from "./drawingBoard/index";
+import DrawingBoard from "./drawingBoard/DrawingBoard";
 import InputForm from "./inputForm/InputForm";
 import Display from "./inputForm/Display";
 

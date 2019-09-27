@@ -16,7 +16,7 @@ const Display = props => {
 
   return (
 
-      <img src={picture.avatar_url} className="input-form__image" alt="some image" />
+      <img src={picture.avatar_url} className="input-form__image" alt="avatar" />
 
   );
 };

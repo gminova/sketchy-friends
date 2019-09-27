@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "canvas": "^2.6.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.2"
@@ -31,11 +30,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "^9.1.4",
-    "jest": "^24.9.0",
-    "jest-canvas-mock": "^2.1.1"
-  },
-  "jest": {
-    "setupFiles": ["jest-canvas-mock", "./src/components/drawingBoard/Canvas.js"
-    ]
+    "jest": "^24.9.0"
   }
 }

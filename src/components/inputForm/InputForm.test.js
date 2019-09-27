@@ -9,5 +9,5 @@ afterEach(cleanup);
 
 test("Input component renders", () => {
   const { getByText } = render(<InputForm />);
-  getByText("Enter any Github handle & try to draw your friends:");
+  getByText("Enter any Github handle and try to draw your friends:");
 });

@@ -14,12 +14,13 @@ const InputForm = props => {
       <form className="input-form">
         <h1 display="none">Sketchy Friends</h1>
         <label className="input-form__label" htmlFor="input-form__input">
-          Enter any Github handle & try to draw your friends:
+          Enter any Github handle and try to draw your friends:
           <input
             type="text"
             name="input-form__input"
             id="input-form__input"
             className="input-form__input"
+            placeholder="fac-17"
             value={userInput}
             onChange={event => setUserInput(event.target.value)}
           />
@@ -28,6 +29,7 @@ const InputForm = props => {
           type="submit"
           value="Find"
           onClick={handleSubmit}
+          className="input-form__submit"
         />
       </form>
     </div>

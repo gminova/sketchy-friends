@@ -85,6 +85,14 @@ const Canvas = () => {
 
   return (
     <div className="drawing-board__container">
+    <p className="drawing-board__color-picker-label">Select a colour:  </p>
+    <input
+      type="color"
+      className="drawing-board__color-picker"
+      value={color}
+      onChange={onColorChange}
+    ></input>
+    <br/>
       <canvas
         ref={ref}
         className="drawing-board__canvas"
@@ -94,14 +102,6 @@ const Canvas = () => {
       <pre>
         {mouseX}:{mouseY}
       </pre>
-      <br />
-      <p>Select a colour:</p>
-      <input
-        type="color"
-        className="drawing-board__color-picker"
-        value={color}
-        onChange={onColorChange}
-      ></input>
     </div>
   );
 };

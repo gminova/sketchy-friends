@@ -54,7 +54,7 @@ const Canvas = () => {
 
     // Add an event listener when the mouse if moved
     myCanvas.addEventListener("mousemove", e => {
-      if (isDrawing === true) {
+      if (isDrawing) {
         drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
         x = e.clientX - rect.left;
         y = e.clientY - rect.top;
@@ -62,7 +62,7 @@ const Canvas = () => {
     });
     // When the mouse up takes place we need to stop drawing
     myCanvas.addEventListener("mouseup", e => {
-      if (isDrawing === true) {
+      if (isDrawing) {
         drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
         x = 0;
         y = 0;

@@ -70,11 +70,13 @@ const Canvas = () => {
       }
     });
 
-
-
-    document.getElementById('clear').addEventListener('click', function() {
-      context.clearRect(0, 0, myCanvas.width, myCanvas.height);
-    }, false);
+    document.getElementById("clear").addEventListener(
+      "click",
+      function() {
+        context.clearRect(0, 0, myCanvas.width, myCanvas.height);
+      },
+      false
+    );
 
     // core drawing function - takes the mouse coordinates and the context
     // and draws from one coordinate point [x,y] to another [x,y]
@@ -91,24 +93,24 @@ const Canvas = () => {
 
   return (
     <div className="drawing-board__container">
-    <p className="drawing-board__color-picker-label">Select a colour:  </p>
-    <input
-      type="color"
-      className="drawing-board__color-picker"
-      value={color}
-      onChange={onColorChange}
-    ></input>
-      <pre>
-        {mouseX}:{mouseY}
-      </pre>
-      <button id='clear'>Clear</button>
-      <br/>
       <canvas
         ref={ref}
         className="drawing-board__canvas"
         width={500}
         height={500}
       ></canvas>
+      <br />
+      <p className="drawing-board__color-picker-label">Select a colour: </p>
+      <input
+        type="color"
+        className="drawing-board__color-picker"
+        value={color}
+        onChange={onColorChange}
+      ></input>
+      <pre>
+        {mouseX}:{mouseY}
+      </pre>
+      <button id="clear">Clear</button>
     </div>
   );
 };

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sketchy-friends/static/css/main.32f40f10.chunk.css",
-    "main.js": "/sketchy-friends/static/js/main.54f09e53.chunk.js",
-    "main.js.map": "/sketchy-friends/static/js/main.54f09e53.chunk.js.map",
+    "main.css": "/sketchy-friends/static/css/main.4c0ed36a.chunk.css",
+    "main.js": "/sketchy-friends/static/js/main.70d8617f.chunk.js",
+    "main.js.map": "/sketchy-friends/static/js/main.70d8617f.chunk.js.map",
     "runtime-main.js": "/sketchy-friends/static/js/runtime-main.cbb04d1c.js",
     "runtime-main.js.map": "/sketchy-friends/static/js/runtime-main.cbb04d1c.js.map",
     "static/js/2.daccd9ff.chunk.js": "/sketchy-friends/static/js/2.daccd9ff.chunk.js",
     "static/js/2.daccd9ff.chunk.js.map": "/sketchy-friends/static/js/2.daccd9ff.chunk.js.map",
     "index.html": "/sketchy-friends/index.html",
-    "precache-manifest.5901e6e2ef0f2a84ae90895213aeb7f5.js": "/sketchy-friends/precache-manifest.5901e6e2ef0f2a84ae90895213aeb7f5.js",
+    "precache-manifest.0fc3ed98f790da5f2d790b1615508bf6.js": "/sketchy-friends/precache-manifest.0fc3ed98f790da5f2d790b1615508bf6.js",
     "service-worker.js": "/sketchy-friends/service-worker.js",
-    "static/css/main.32f40f10.chunk.css.map": "/sketchy-friends/static/css/main.32f40f10.chunk.css.map"
+    "static/css/main.4c0ed36a.chunk.css.map": "/sketchy-friends/static/css/main.4c0ed36a.chunk.css.map"
   }
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sketchy-friends/precache-manifest.5901e6e2ef0f2a84ae90895213aeb7f5.js"
+  "/sketchy-friends/precache-manifest.0fc3ed98f790da5f2d790b1615508bf6.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -61,7 +61,7 @@ const Canvas = () => {
       }
     });
     // When the mouse up takes place we need to stop drawing
-    window.addEventListener("mouseup", e => {
+    myCanvas.addEventListener("mouseup", e => {
       if (isDrawing === true) {
         drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
         x = 0;

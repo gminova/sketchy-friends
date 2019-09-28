@@ -1,57 +1,42 @@
 html {
-  background: linear-gradient(
-    to top,
-    /* Colour theme: allows text fading into top nav */ rgba(224, 224, 25, 0.7),
-    rgba(3, 181, 252, 0.7) 100%
-  );
-}
-
-.app {
-  /* height: 100vw; */
-  width: 100vw;
-  margin: 0 auto;
-  color: #eb2380;
-
-  text-shadow: -1px 0 #383838, 0 1px #383838;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  color: #000000;
+  text-align: center;
+  background-color: goldenrod;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-  margin: auto;
-  font-size: 3em;
-  color: #eb2380;
-  font-family: "Knewave", cursive;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 5px;
 }
 
-.app--input-form {
-  text-align: center;
-}
-
-.input-form {
-  text-align: center;
+.app {
+  margin: 0 auto;
 }
 
 .input-form__input {
   margin: 10px auto;
   display: block;
-  width: 200px;
-  height: 30px;
   font-size: 1em;
-  background: none;
   border-radius: 10px;
-  border: 2px #eb2380 solid;
-  font-family: "Knewave", cursive;
-  color: #eb2380;
+  border: 2px #000000 solid;
   text-align: center;
 }
 
 .input-form__submit {
-  background: none;
-  width: 100px;
+  width: 80px;
   height: 30px;
   border-radius: 10px;
-  border: 2px #eb2380 solid;
-  font-family: "Knewave", cursive;
-  color: #eb2380;
+  border: 2px #000000 solid;
 }
 
 .display--image-container {
@@ -59,42 +44,27 @@ h1 {
   width: 500px;
 }
 
-.display--p {
+.display--p,
+.display--h3,
+.drawing-board__color-picker-label,
+.drawing-board__color-picker
+.input-form__submit {
   display: inline;
 }
 
-.display--h3 {
-  display: inline;
-}
-
-.display--image {
-  margin: auto;
-  margin-top: 40px;
-  border: 2px solid #eb2380;
-  height: 400px;
-  width: 400px;
-}
-
+.display--image,
 .drawing-board__canvas {
   margin: auto;
   margin-top: 40px;
-  border: 2px solid #eb2380;
-  width: 400px;
-  height: 400px;
+  border: 2px #000000 solid;
+  width: 500px;
+  height: 500px;
   background-color: whitesmoke;
+  border-radius: 10px;
 }
 
 .drawing-board__container {
   margin: auto;
-  text-align: right;
-}
-
-.drawing-board__color-picker-label {
-  display: inline;
-}
-
-.drawing-board__color-picker {
-  display: inline;
 }
 
 .app--drawing-section {

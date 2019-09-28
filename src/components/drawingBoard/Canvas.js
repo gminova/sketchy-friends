@@ -98,17 +98,17 @@ const Canvas = () => {
       value={color}
       onChange={onColorChange}
     ></input>
-    <br/>
+      <pre>
+        {mouseX}:{mouseY}
+      </pre>
+      <button id='clear'>Clear</button>
+      <br/>
       <canvas
         ref={ref}
         className="drawing-board__canvas"
         width={500}
         height={500}
       ></canvas>
-      <pre>
-        {mouseX}:{mouseY}
-      </pre>
-      <button id='clear'>Clear</button>
     </div>
   );
 };

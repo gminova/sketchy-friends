@@ -65,6 +65,7 @@ h1 {
 
 .drawing-board__container {
   margin: auto;
+  cursor: cell;
 }
 
 .app--drawing-section {

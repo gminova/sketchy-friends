@@ -1,6 +1,5 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
-import 'jest-canvas-mock';
 import Canvas from "./Canvas";
 
 // ensures our document gets cleared out after each test

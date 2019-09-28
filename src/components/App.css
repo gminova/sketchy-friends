@@ -8,7 +8,7 @@ html {
   height: 100vh;
   color: #000000;
   text-align: center;
-  background-color: goldenrod;
+  background-color: lightgoldenrodyellow;
   display: flex;
   flex-direction: column;
 }

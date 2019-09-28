@@ -40,3 +40,6 @@ Stretch goals
 
 ![](https://files.gitter.im/Albadylic/y2xJ/jack.png)
 ![](https://user-images.githubusercontent.com/7283908/65758031-349de480-e110-11e9-960f-a0eb33594b87.png)
+
+### Resources 
+https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event

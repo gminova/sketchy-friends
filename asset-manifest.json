@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.06655ec6.chunk.css",
-    "main.js": "/static/js/main.b3ca18ac.chunk.js",
-    "main.js.map": "/static/js/main.b3ca18ac.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.716ac24f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.716ac24f.js.map",
-    "static/js/2.2ff26bcb.chunk.js": "/static/js/2.2ff26bcb.chunk.js",
-    "static/js/2.2ff26bcb.chunk.js.map": "/static/js/2.2ff26bcb.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ed6453414901723bacb0d3471bf4e013.js": "/precache-manifest.ed6453414901723bacb0d3471bf4e013.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.06655ec6.chunk.css.map": "/static/css/main.06655ec6.chunk.css.map"
+    "main.css": "/sketchy-friends/static/css/main.06655ec6.chunk.css",
+    "main.js": "/sketchy-friends/static/js/main.b3ca18ac.chunk.js",
+    "main.js.map": "/sketchy-friends/static/js/main.b3ca18ac.chunk.js.map",
+    "runtime-main.js": "/sketchy-friends/static/js/runtime-main.cbb04d1c.js",
+    "runtime-main.js.map": "/sketchy-friends/static/js/runtime-main.cbb04d1c.js.map",
+    "static/js/2.2ff26bcb.chunk.js": "/sketchy-friends/static/js/2.2ff26bcb.chunk.js",
+    "static/js/2.2ff26bcb.chunk.js.map": "/sketchy-friends/static/js/2.2ff26bcb.chunk.js.map",
+    "index.html": "/sketchy-friends/index.html",
+    "precache-manifest.c7afa5715b3c1403b909fd08c4de691a.js": "/sketchy-friends/precache-manifest.c7afa5715b3c1403b909fd08c4de691a.js",
+    "service-worker.js": "/sketchy-friends/service-worker.js",
+    "static/css/main.06655ec6.chunk.css.map": "/sketchy-friends/static/css/main.06655ec6.chunk.css.map"
   }
 }

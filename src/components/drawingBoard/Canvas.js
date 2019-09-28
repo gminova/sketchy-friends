@@ -54,7 +54,7 @@ const Canvas = () => {
 
     // Add an event listener when the mouse if moved
     myCanvas.addEventListener("mousemove", e => {
-      if (isDrawing === true) {
+      if (isDrawing) {
         drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
         x = e.clientX - rect.left;
         y = e.clientY - rect.top;
@@ -62,13 +62,21 @@ const Canvas = () => {
     });
     // When the mouse up takes place we need to stop drawing
     myCanvas.addEventListener("mouseup", e => {
-      if (isDrawing === true) {
+      if (isDrawing) {
         drawLine(context, x, y, e.clientX - rect.left, e.clientY - rect.top);
         x = 0;
         y = 0;
         isDrawing = false;
       }
     });
+
+    document.getElementById("clear").addEventListener(
+      "click",
+      function() {
+        context.clearRect(0, 0, myCanvas.width, myCanvas.height);
+      },
+      false
+    );
 
     // core drawing function - takes the mouse coordinates and the context
     // and draws from one coordinate point [x,y] to another [x,y]
@@ -85,23 +93,24 @@ const Canvas = () => {
 
   return (
     <div className="drawing-board__container">
-    <p className="drawing-board__color-picker-label">Select a colour:  </p>
-    <input
-      type="color"
-      className="drawing-board__color-picker"
-      value={color}
-      onChange={onColorChange}
-    ></input>
-    <br/>
       <canvas
         ref={ref}
         className="drawing-board__canvas"
         width={500}
         height={500}
       ></canvas>
+      <br />
+      <p className="drawing-board__color-picker-label">Select a colour: </p>
+      <input
+        type="color"
+        className="drawing-board__color-picker"
+        value={color}
+        onChange={onColorChange}
+      ></input>
       <pre>
         {mouseX}:{mouseY}
       </pre>
+      <button id="clear">Clear</button>
     </div>
   );
 };

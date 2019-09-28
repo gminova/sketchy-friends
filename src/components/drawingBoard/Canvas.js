@@ -70,6 +70,12 @@ const Canvas = () => {
       }
     });
 
+
+
+    document.getElementById('clear').addEventListener('click', function() {
+      context.clearRect(0, 0, myCanvas.width, myCanvas.height);
+    }, false);
+
     // core drawing function - takes the mouse coordinates and the context
     // and draws from one coordinate point [x,y] to another [x,y]
     const drawLine = (context, x1, y1, x2, y2) => {
@@ -102,6 +108,7 @@ const Canvas = () => {
       <pre>
         {mouseX}:{mouseY}
       </pre>
+      <button id='clear'>Clear</button>
     </div>
   );
 };
